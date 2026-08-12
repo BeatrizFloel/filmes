@@ -1,0 +1,155 @@
+### Mostrar todos os filmes
+GET http://localhost:3000/filmes
+
+###
+
+### Mostrar filme pelo ID
+GET http://localhost:3000/filmes/1
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Enrolados",
+    "genre": "Comédia de animação musical",
+    "duration": 101,
+    "age_rating": "Livre"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Descendentes",
+    "genre": "Musical de aventura fantasiosa",
+    "duration": 90,
+    "age_rating": "10"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Shrek",
+    "genre": "Animação, comédia",
+    "duration": 90,
+    "age_rating": "Livre"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "O Poderoso Chefão",
+    "genre": "Crime, drama",
+    "duration": 175,
+    "age_rating": "14"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Procurando Nemo",
+    "genre": "Animação, aventura",
+    "duration": 100,
+    "age_rating": "Livre"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Toy Story",
+    "genre": "Animação",
+    "duration": 81,
+    "age_rating": "Livre"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Divertidamente",
+    "genre": "Animação, comédia",
+    "duration": 95,
+    "age_rating": "Livre"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Barbie",
+    "genre": "Fantasia",
+    "duration": 114,
+    "age_rating": "12"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "Minions",
+    "genre": "Comédia",
+    "duration": 91,
+    "age_rating": "Livre"
+}
+
+###
+
+### Adicionar filme
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "title": "A Bela e a Fera",
+    "genre": "Fantasia, romance",
+    "duration": 129,
+    "age_rating": "Livre"
+}
+
+###
+
+### Editar filme com ID 1
+PUT http://localhost:3000/filmes/1
+Content-Type: application/json
+
+{
+    "title": "Enrolados (Atualizado)",
+    "genre": "Comédia de animação musical",
+    "duration": 101,
+    "age_rating": "Livre"
+}
+
+###
+
+### Excluir filme com ID 1
+DELETE http://localhost:3000/filmes/1
