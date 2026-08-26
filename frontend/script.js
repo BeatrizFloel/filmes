@@ -1,6 +1,6 @@
 async function buscarFilmes() {
     // acessar a rota GET do backend, trazer os filmes e mostrar os filmes na tela
-    const resposta = await fetch("http://localhost:3000/filmes") // resposta do backend
+    const resposta = await fetch("http://localhost:3000/") // resposta do backend
     const filmes = await resposta.json() // converte a resposta num objeto JS
     const sectionFilmes = document.querySelector(".filmes")
 
