@@ -1,5 +1,5 @@
 ### Mostrar todos os filmes
-GET http://localhost:3000/filmes
+GET http://localhost:3000/
 
 ###
 

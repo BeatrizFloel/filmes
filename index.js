@@ -31,21 +31,6 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/filmes/:id", (req, res) => {
-
-    const b = "SELECT * FROM filmes_BeatrizFloelGiovannaMigliorini WHERE id = ?";
-
-    sql.query(b, [req.params.id], (erro, resultado) => {
-        if (erro) {
-            return res.status(500).json(erro);
-        }
-
-        res.json(resultado);
-    });
-
-});
-
-
 app.post("/filmes", (req, res) => {
 
     const { title, genre, duration, age_rating } = req.body;
