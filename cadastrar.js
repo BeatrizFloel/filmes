@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            const resposta = await fetch("http://localhost:3000/filmes", {
+            const resposta = await fetch("https://filmes-beatrizfloelegiovannamiglior.vercel.app/filmes", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

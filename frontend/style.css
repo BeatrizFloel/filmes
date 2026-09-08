@@ -13,9 +13,17 @@ justify-content: center;
 gap: 20px;
 }
 
-div {
+.filmes > div {
 border: 1px solid black;
 width: 300px;
-height: 200px;
+min-height: 220px;
 padding: 10px;
+box-sizing: border-box;
+}
+
+.btn-apagar {
+margin-top: 10px;
+padding: 8px 10px;
+cursor: pointer;
+border-radius: 4px;
 }
