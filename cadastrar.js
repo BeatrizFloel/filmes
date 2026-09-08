@@ -1,31 +1,47 @@
-function cadastrarFilme() {
-    const title = document.getElementById("title").value
-    const gender = document.getElementById("gender").value
-    const ageLimit = document.getElementById("ageLimit").valueAsNUmber
-    const duration = document.getElementById("duration").valueAsNUmber
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formCadastro");
 
+    if (!form) return;
 
-if (title === "" || gender === "" || ageLimit === || duration === "") {
-    alert("Preencha todos os campos!")
-    return
- }
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
- const filme = {
-    title: title.value,
-    gender: gender.value,
-    ageLimit: ageLimit.valueAsNumber,
-    duration: duration.valueAsNumber
- }
+        const title = document.getElementById("title").value.trim();
+        const genre = document.getElementById("gender").value.trim();
+        const ageLimit = Number(document.getElementById("ageLimit").value);
+        const duration = Number(document.getElementById("duration").value);
 
- const resposta = await fetch "https://filmes-backend", {
-    method: "POST",
-    headers: {
-        "content-type": "application/json"
-    }
-    body: JSON.stringify(filme)
- }
+        if (!title || !genre || Number.isNaN(ageLimit) || Number.isNaN(duration)) {
+            alert("Preencha todos os campos!");
+            return;
+        }
 
- const mensagem = await resposta.json()
+        const filme = {
+            title,
+            genre,
+            ageLimit,
+            duration,
+            age_rating: ageLimit
+        };
 
+        try {
+            const resposta = await fetch("http://localhost:3000/filmes", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(filme)
+            });
 
-}
+            const mensagem = await resposta.text();
+            alert(mensagem || "Filme cadastrado com sucesso!");
+
+            if (resposta.ok) {
+                window.location.href = "./frontend/index.html";
+            }
+        } catch (erro) {
+            console.error(erro);
+            alert("Erro ao cadastrar filme.");
+        }
+    });
+});

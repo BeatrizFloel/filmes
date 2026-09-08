@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./cadastrar.js" defer></script>
 </head>
 <body>
     <header>
-        <a href="../atividade1 marcio/frontend/index.html">Voltar</a>
+        <a href="./frontend/index.html">Voltar</a>
         <h1>Cadastrar novos filmes</h1>
     </header>
 
     <main>
-        <form>
+        <form id="formCadastro">
             <div>
                 <label for="title">Título do filme:</label>
                 <input type="text" id="title" placeholder="Digite aqui o título">
@@ -30,6 +31,7 @@
                 <input type="number" id="duration" placeholder="Digite aqui a duração">
             </div>
 
+            <button type="submit">Cadastrar</button>
         </form>
     </main>
 </body>
