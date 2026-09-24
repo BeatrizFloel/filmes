@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmes</title>
+    <title>Catálogo de Filmes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand-block">
+                <p class="eyebrow">Catálogo</p>
+                <h1>Filmes</h1>
+            </div>
+            <a class="btn btn-primary" href="../cadastrar.html">Cadastrar filme</a>
+        </header>
 
-    <header>
-        <a href="../cadastrar.html">Cadastrar</a>
-    </header>
-    <h1>Filmes da Beatriz Floel e Giovanna Migliorini</h1>
-
-    <section class="filmes">
-    </section>
+        <main>
+            <section class="filmes" aria-live="polite"></section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>

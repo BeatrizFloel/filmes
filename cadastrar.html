@@ -1,38 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar Filme</title>
+    <link rel="stylesheet" href="./frontend/style.css">
     <script src="./cadastrar.js" defer></script>
 </head>
 <body>
-    <header>
-        <a href="./frontend/index.html">Voltar</a>
-        <h1>Cadastrar novos filmes</h1>
-    </header>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="btn btn-secondary" href="./frontend/index.html">Voltar</a>
+            <div class="brand-block">
+                <p class="eyebrow">Cadastro</p>
+                <h1>Novo filme</h1>
+            </div>
+        </header>
 
-    <main>
-        <form id="formCadastro">
-            <div>
-                <label for="title">Título do filme:</label>
-                <input type="text" id="title" placeholder="Digite aqui o título">
-            </div>
-            <div>
-                <label for="gender">Gênero:</label>
-                <input type="text" id="gender" placeholder="Digite aqui o gênero">
-            </div>
-            <div>
-                <label for="ageLimit">Classificação indicativa:</label>
-                <input type="number" id="ageLimit" placeholder="Digite aqui a classificação indicativa">
-            </div>
-            <div>
-                <label for="duration">Duração:</label>
-                <input type="number" id="duration" placeholder="Digite aqui a duração">
-            </div>
+        <main class="page-panel">
+            <form id="formCadastro" class="form-grid">
+                <div class="field">
+                    <label for="title">Título do filme</label>
+                    <input type="text" id="title" placeholder="Digite o título do filme">
+                </div>
 
-            <button type="submit">Cadastrar</button>
-        </form>
-    </main>
+                <div class="field">
+                    <label for="genre">Gênero</label>
+                    <input type="text" id="genre" placeholder="Digite o gênero">
+                </div>
+
+                <div class="field">
+                    <label for="ageRating">Classificação indicativa</label>
+                    <input type="number" id="ageRating" placeholder="Ex.: 12">
+                </div>
+
+                <div class="field">
+                    <label for="duration">Duração</label>
+                    <input type="number" id="duration" placeholder="Ex.: 120">
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Cadastrar filme</button>
+                </div>
+            </form>
+        </main>
+    </div>
 </body>
 </html>

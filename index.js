@@ -90,6 +90,24 @@ app.delete("/filmes/:id", (req, res) => {
 
 });
 
+app.get("/filmes/:id", (req, res) => {
+
+    const c = "SELECT * FROM filmes_BeatrizFloelGiovannaMigliorini WHERE id = ?";
+
+    sql.query(c, [req.params.id], (erro, resultado) => {
+        if (erro) {
+            return res.status(500).json(erro);
+        }
+
+        if (!resultado.length) {
+            return res.status(404).json({ message: "Filme não encontrado." });
+        }
+
+        res.json(resultado[0]);
+    });
+
+});
+
 
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000");

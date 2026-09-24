@@ -7,21 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const title = document.getElementById("title").value.trim();
-        const genre = document.getElementById("gender").value.trim();
-        const ageLimit = Number(document.getElementById("ageLimit").value);
+        const genre = document.getElementById("genre").value.trim();
+        const ageRating = Number(document.getElementById("ageRating").value);
         const duration = Number(document.getElementById("duration").value);
 
-        if (!title || !genre || Number.isNaN(ageLimit) || Number.isNaN(duration)) {
-            alert("Preencha todos os campos!");
+        if (!title || !genre || Number.isNaN(ageRating) || Number.isNaN(duration)) {
+            alert("Preencha todos os campos corretamente!");
             return;
         }
 
         const filme = {
             title,
             genre,
-            ageLimit,
             duration,
-            age_rating: ageLimit
+            age_rating: ageRating
         };
 
         try {

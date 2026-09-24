@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Filme</title>
+    <link rel="stylesheet" href="./frontend/style.css">
+    <script src="./editar.js" defer></script>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="btn btn-secondary" href="./frontend/index.html">Voltar</a>
+            <div class="brand-block">
+                <p class="eyebrow">Edição</p>
+                <h1 id="tituloPagina">Editar filme</h1>
+            </div>
+        </header>
+
+        <main class="page-panel">
+            <form id="formEdicao" class="form-grid">
+                <div class="field">
+                    <label for="editTitle">Título do filme</label>
+                    <input type="text" id="editTitle" placeholder="Digite o título do filme">
+                </div>
+
+                <div class="field">
+                    <label for="editGenre">Gênero</label>
+                    <input type="text" id="editGenre" placeholder="Digite o gênero">
+                </div>
+
+                <div class="field">
+                    <label for="editAgeRating">Classificação indicativa</label>
+                    <input type="number" id="editAgeRating" placeholder="Ex.: 12">
+                </div>
+
+                <div class="field">
+                    <label for="editDuration">Duração</label>
+                    <input type="number" id="editDuration" placeholder="Ex.: 120">
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Salvar alterações</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
